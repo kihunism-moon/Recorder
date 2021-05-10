@@ -8,6 +8,11 @@ import androidx.appcompat.widget.AppCompatImageButton
 //ImageButton 은  AppCompat을 상속 받아야 함 -> AppCompatImageButton 으로 사용!
 
 class RecordButton(context: Context, attrs: AttributeSet): AppCompatImageButton(context, attrs) {
+
+    init {
+        setBackgroundResource(R.drawable.shape_oval_button)
+    }
+
         fun updateIconWithState(state: State) {
             when(state) {
                 State.BEFORE_RECORDING -> {
